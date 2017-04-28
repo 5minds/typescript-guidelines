@@ -1,0 +1,27 @@
+{
+  "name": "tslint-config-5minds",
+  "version": "1.0.2",
+  "description": "tslint-rules we use at 5minds",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/5minds/JS.Foundation.git"
+  },
+  "keywords": [
+    "tslint"
+  ],
+  "author": "5Minds IT-Solutions GmbH & Co. KG <info@5minds.de>",
+  "maintainer": "Heiko Mathes <heiko.mathes@5minds.de>",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/5minds/JS.Foundation/issues"
+  },
+  "homepage": "https://github.com/5minds/JS.Foundation#readme",
+  "peerDependencies": {
+    "tslint": "^5.1.0",
+    "typescript": "^2.1.4"
+  }
+}
