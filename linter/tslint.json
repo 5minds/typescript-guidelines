@@ -1,4 +1,4 @@
-s{
+{
   "rules": {
     "adjacent-overload-signatures": true,
     "member-access": [true, "check-accessor"],
