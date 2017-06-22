@@ -826,7 +826,7 @@ foo = new Foo;
 
   4.8 **no-consecutive-blank-lines:** Disallows one or more blank lines in a row.
 
-  4.14 **no-parameter-properties:** Disallows parameter properties in class constructors.
+  4.9 **no-parameter-properties:** Disallows parameter properties in class constructors.
 ```typescript
 // good
 class Foo {
@@ -847,7 +847,7 @@ class Foo {
 }
 ```
 
-  4.9 **no-unnecessary-initializer:** Forbids a ‘var’/’let’ statement or destructuring initializer to be initialized to ‘undefined’.
+  4.10 **no-unnecessary-initializer:** Forbids a ‘var’/’let’ statement or destructuring initializer to be initialized to ‘undefined’.
 ```typescript
 // good
 const undefinedAlias = undefined;
@@ -861,12 +861,12 @@ let notInitialized;
 let initialized = undefined;
 ```
 
-<!--   4.16 **no-unnecessary-qualifier:** Warns when a namespace qualifier (`A.x`) is unnecessary. -->
+<!--   4.11 **no-unnecessary-qualifier:** Warns when a namespace qualifier (`A.x`) is unnecessary. -->
 <!-- ```typescript -->
 
 <!-- ``` -->
 
-  4.10 **object-literal-key-quotes:** Enforces consistent object literal property quote style.
+  4.11 **object-literal-key-quotes:** Enforces consistent object literal property quote style.
 ```typescript
 const obj = {
     // good
@@ -881,7 +881,7 @@ const obj = {
 
 <!-- ``` -->
 
-  4.11 **one-line:** Requires the specified tokens to be on the same line as the expression preceding them.
+  4.12 **one-line:** Requires the specified tokens to be on the same line as the expression preceding them.
 
 ```typescript
 // good
@@ -901,7 +901,7 @@ catch (error) {
 }
 ```
 
-  4.12 **one-variable-per-declaration:** Disallows multiple variable definitions in the same declaration statement.
+  4.13 **one-variable-per-declaration:** Disallows multiple variable definitions in the same declaration statement.
 ```typescript
 // good
 const foo;
@@ -912,7 +912,7 @@ const bar = true;
 const foo, bar = true;
 ```
 
-  4.13 **ordered-imports:** Requires that import statements be alphabetized.
+  4.14 **ordered-imports:** Requires that import statements be alphabetized.
 ```typescript
 // good
 import * as BluebirdPromise from 'bluebird';
@@ -929,7 +929,7 @@ import * as BluebirdPromise from 'bluebird';
 
 <!-- ``` -->
 
-  4.14 **prefer-method-signature:** Prefer `foo(): void` over `foo: () => void` in interfaces and types.
+  4.15 **prefer-method-signature:** Prefer `foo(): void` over `foo: () => void` in interfaces and types.
 ```typescript
 // good
 interface ICanvas {
@@ -943,7 +943,7 @@ interface ICanvas {
 }
 ```
 
-  4.15 **quotemark:** Requires single or double quotes for string literals.
+  4.16 **quotemark:** Requires single or double quotes for string literals.
 
 ```typescript
 // good
@@ -962,7 +962,7 @@ const anyText: string = "nor is he early";
 const singleQuoteChar: string = "'";
 ```
 
-  4.16 **semicolon:** Enforces consistent semicolon usage at the end of every statement.
+  4.17 **semicolon:** Enforces consistent semicolon usage at the end of every statement.
 ```typescript
 // good
 const good: string = 'presence of semicolon';
@@ -972,7 +972,7 @@ const good: string = 'presence of semicolon';
 const bad: string = 'lack of semicolon'
 ```
 
-  4.17 **space-before-function-paren:** Require or disallow a space before function parenthesis
+  4.18 **space-before-function-paren:** Require or disallow a space before function parenthesis
 ```typescript
 // good
 function foo(): void {
@@ -986,7 +986,7 @@ function bar (): void {
 }
 ```
 
-  4.18 **variable-name:** Checks variable names for various errors.
+  4.19 **variable-name:** Checks variable names for various errors.
 ```typescript
 // good
 const STATIC_PI: number = 3.14;
@@ -1016,7 +1016,7 @@ let PascalCased;
 let snake_case;
 ```
 
-  4.19 **whitespace:** Enforces whitespace style conventions.
+  4.20 **whitespace:** Enforces whitespace style conventions.
 
 ```typescript
 // good
