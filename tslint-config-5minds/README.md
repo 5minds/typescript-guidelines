@@ -171,17 +171,17 @@ const path = require("path");
  1.12 **prefer-for-of:** Recommends a ‘for-of’ loop over a standard ‘for’ loop if the index is only used to access the array being iterated.
 
 ```typescript
-    const cars = ['Audi', 'Ford', 'Mercedes'];
-    // good
-    for (const car of cars) {
-	    drive(car);
-    }
+const cars = ['Audi', 'Ford', 'Mercedes'];
+// good
+for (const car of cars) {
+  drive(car);
+}
 ```
 ```typescript
-    // bad -> Expected a 'for-of' loop instead of a 'for' loop with this simple iteration
-    for (let i = 0; i < cars.length; i++) {
-	    drive(cars[i]);
-    }
+// bad -> Expected a 'for-of' loop instead of a 'for' loop with this simple iteration
+for (let i = 0; i < cars.length; i++) {
+  drive(cars[i]);
+}
 ```
  <!-- 1.132 **promise-function-async:** Requires any function or method that returns a promise to be marked async. -->
 
@@ -550,28 +550,28 @@ Influenced by switchcases, `catch`, `if` and `? :` `||` and `&&` and any kind of
 ```typescript
 // bad -> The function numberIsEven has a cyclomatic complexity of 21 which is higher than the threshold of 20
 function numberIsEven(num: number): boolean {
-    switch(num) {
-        case 1: return true;
-        case 2: return false;
-        case 3: return true;
-        case 4: return false;
-        case 5: return true;
-        case 6: return false;
-        case 7: return true;
-        case 8: return false
-        case 10: return true;
-        case 11: return false;
-        case 12: return true;
-        case 13: return false;
-        case 14: return true;
-        case 15: return false;
-        case 16: return true;
-        case 17: return false;
-        case 18: return true;
-        case 19: return false;
-        case 20: return true;
-        case 21: return false;
-    }
+  switch(num) {
+    case 1: return true;
+    case 2: return false;
+    case 3: return true;
+    case 4: return false;
+    case 5: return true;
+    case 6: return false;
+    case 7: return true;
+    case 8: return false
+    case 10: return true;
+    case 11: return false;
+    case 12: return true;
+    case 13: return false;
+    case 14: return true;
+    case 15: return false;
+    case 16: return true;
+    case 17: return false;
+    case 18: return true;
+    case 19: return false;
+    case 20: return true;
+    case 21: return false;
+  }
 }
 ```
 
