@@ -826,10 +826,26 @@ foo = new Foo;
 
   4.8 **no-consecutive-blank-lines:** Disallows one or more blank lines in a row.
 
-<!--   4.14 **no-parameter-properties:** Disallows parameter properties in class constructors. -->
-<!-- ```typescript -->
+  4.14 **no-parameter-properties:** Disallows parameter properties in class constructors.
+```typescript
+// good
+class Foo {
 
-<!-- ``` -->
+  private bar: Bar;
+
+  constructor(bar: Bar) {
+    this.bar = bar;
+  }
+
+}
+```
+```typescript
+// bad
+class Foo {
+
+  constructor(private bar: Bar) {}
+}
+```
 
   4.9 **no-unnecessary-initializer:** Forbids a ‘var’/’let’ statement or destructuring initializer to be initialized to ‘undefined’.
 ```typescript
