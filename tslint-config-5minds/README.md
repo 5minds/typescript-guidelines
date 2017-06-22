@@ -654,11 +654,11 @@ import path = require('path');
   3.12 **prefer-const:** Requires that variable declarations use `const` instead of `let` if possible.
 ```typescript
 function context() {
-    // good
-    const e: number = 2.72;
+  // good
+  const e: number = 2.72;
 
-    // bad -> Identifier 'pi' is never reassigned; use 'const' instead of 'let'.
-    let pi: number = 3.14;
+  // bad -> Identifier 'pi' is never reassigned; use 'const' instead of 'let'.
+  let pi: number = 3.14;
 }
 
 ```
@@ -869,10 +869,10 @@ let initialized = undefined;
   4.11 **object-literal-key-quotes:** Enforces consistent object literal property quote style.
 ```typescript
 const obj = {
-    // good
-    foo: 'bar',
-    // bad -> Unnecessarily quoted property 'qux' found.
-    'qux': 'baz',
+  // good
+  foo: 'bar',
+  // bad -> Unnecessarily quoted property 'qux' found.
+  'qux': 'baz',
 };
 ```
 
