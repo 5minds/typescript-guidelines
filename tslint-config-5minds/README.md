@@ -578,7 +578,7 @@ function numberIsEven(num: number): boolean {
   3.2 **eofline:** Ensures the file ends with a newline.
 Posix defines a line as a number of characters ending with the newline. Most software will recognize the last line anyways, but you should not rely on that.
 
-  3.3 **indent:** Enforces indentation spaces. As soon as this rule supports setting the number of spaces per indentation it will be set to 4 spaces in the 5Minds-tslint-config.
+  3.3 **indent:** Enforces indentation spaces. As soon as this rule supports setting the number of spaces per indentation it will be set to 2 spaces in the 5Minds-tslint-config.
 
   3.4 **linebreak-style:** Enforces a consistent linebreak style. You may choose between `CRLF` and `LF`, referencing the control characters `carriage return \r` and `line feed (\n).
 Windows uses CRLF; Unix uses LF.
