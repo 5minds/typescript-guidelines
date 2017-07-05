@@ -844,6 +844,7 @@ class Foo {
 class Foo {
 
   constructor(private bar: Bar) {}
+
 }
 ```
 
