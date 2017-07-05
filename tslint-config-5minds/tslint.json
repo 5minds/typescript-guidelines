@@ -117,7 +117,7 @@
     "new-parens": true,
     "no-angle-bracket-type-assertion": false,
     "no-consecutive-blank-lines": [true, 1],
-    "no-parameter-properties": false,
+    "no-parameter-properties": true,
     "no-unnecessary-initializer": true,
     "object-literal-key-quotes": [true, "as-needed"],
     "object-literal-shorthand": false,

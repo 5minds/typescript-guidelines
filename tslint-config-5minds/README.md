@@ -12,7 +12,7 @@
 # Typescript specific
 
  1.1 **adjacent-overload-signatures:** Enforces function overloads to be consecutive.
-  
+
 ```typescript
 // good
 interface ICanvas {
@@ -22,7 +22,7 @@ interface ICanvas {
 	erase(form: Line);
 }
 ```
-  
+
 ```typescript
 // bad -> [All 'constructor' signatures should be adjacent]
 class Foo {
@@ -53,9 +53,9 @@ class Numbers {
 }
 ```
  1.3 **member-ordering:** Enforces member ordering
- 
+
 ```typescript
-// good 
+// good
 class GoodOrderClass {
 	public static firstStatic a = 1;
 	protected static secondStatic = 2;
@@ -71,20 +71,20 @@ class BadOrderClass {
 }
 
 ```
- 
+
  1.4 **no-any:** Disallows usages of `any` as a type declaration.
 ```typescript
 // bad -> Type declaration of 'any' is forbidden.
 const nothingIsAnything: any = true;
 
 ```
- 
+
  1.5 **no-empty-interface:** Forbids empty interfaces.
 
 ```typescript
 // good
-interface IIsNamed { 
-	name: string; 
+interface IIsNamed {
+	name: string;
 }
 ```
 ```typescript
@@ -95,10 +95,10 @@ interface IEmpty { }
 // bad -> An interface declaring no members is equivalent to its supertype.
 interface IEmptySubtype extends IIsNamed { }
 ```
- 
+
  <!-- 1.5 **no-inferrable-types:** Disallows explicit type declarations for variables or parameters initialized to a number, string, or boolean.  -->
 
- 
+
  1.6 **no-internal-module:** Disallows internal module. TypeScript introduced the equivalent keyword 'namespace' in order to avoid confusion with ES6 modules.
 ```typescript
 // bad -> The internal 'module' syntax is deprecated, use the 'namespace' keyword instead.
@@ -106,8 +106,8 @@ declare module 'SomeModule' {
 	export function fn(): string;
 }
 ```
- 
- 1.7 **no-magic-numbers:** 
+
+ 1.7 **no-magic-numbers:**
 Disallows the use constant number values outside of variable assignments.
 When no list of allowed values is specified, -1, 0 and 1 are allowed by default.
 ```typescript
@@ -119,7 +119,7 @@ console.log(leet);
 // bad -> 'magic numbers' are not allowed (no-magic-numbers)
 console.log(1337);
 ```
- 
+
  1.8 **no-namespace:** Disallows use of internal modules and namespaces. Use ES6 import/export.
  This rule prevents you from describing external modules with `declare namespace` but that should be an exception and should never be used in .ts-files anyway.
 
@@ -130,7 +130,7 @@ declare namespace ExternalModule {
 }
 ```
 
- 
+
  1.9 **no-reference:** Disallows /// &lt;reference path="..." /&gt; imports (use ES6-style imports instead).
 ```typescript
 // bad -> [tslint] <reference> is not allowed, use imports (no-reference)
@@ -138,16 +138,16 @@ declare namespace ExternalModule {
 ```
  1.10 **no-var-requires:** Disallows the use of require statements except in import statements.
 
- 
+
 ```typescript
 // good
 import * as path from 'path';
 ```
 ```typescript
 // bad -> require statement not part of an import statement (no-var-requires)
-const path = require("path"); 
+const path = require("path");
 ```
-1.11 **only-arrow-functions:** Disallows traditional (non-arrow), unnamed function expressions. 
+1.11 **only-arrow-functions:** Disallows traditional (non-arrow), unnamed function expressions.
 
 ```typescript
 // good
@@ -167,27 +167,27 @@ const path = require("path");
     return num % 3 === 0 ? 'fizz' : num;
 })
 ```
- 
+
  1.12 **prefer-for-of:** Recommends a ‘for-of’ loop over a standard ‘for’ loop if the index is only used to access the array being iterated.
 
 ```typescript
-  const cars = ['Audi', 'Ford', 'Mercedes'];
-  // good
-  for (const car of cars) {
-	  drive(car);
-  }
+const cars = ['Audi', 'Ford', 'Mercedes'];
+// good
+for (const car of cars) {
+  drive(car);
+}
 ```
 ```typescript
-  // bad -> Expected a 'for-of' loop instead of a 'for' loop with this simple iteration 
-  for (let i = 0; i < cars.length; i++) {
-	  drive(cars[i]);
-  }
+// bad -> Expected a 'for-of' loop instead of a 'for' loop with this simple iteration
+for (let i = 0; i < cars.length; i++) {
+  drive(cars[i]);
+}
 ```
  <!-- 1.132 **promise-function-async:** Requires any function or method that returns a promise to be marked async. -->
 
- 
+
  1.13 **typedef:** Requires type definitions to exist.
-  
+
 ```typescript
 // good
 function foo(bar: string): number {
@@ -199,10 +199,10 @@ function foo(bar: string): number {
 function foo(bar) {
 	return parseInt(bar);
 }
- 
+
 ```
 
- 
+
  1.14 **typedef-whitespace:** Requires or disallows whitespace for type definitions. You can define whether there is one or no space between the definition's colon and the previous or following symbol.
 
 ```typescript
@@ -235,23 +235,23 @@ function log(logInput: string): void;
 
 
 <!-- **ban:** Bans the use of specific functions or global methods. -->
- 
+
   2.1 **curly:** Enforces braces for `if`/`for`/`do`/`while` statements.
 ```typescript
 // good
 if (result.type === 'JSON') {
-   return res;
+    return res;
 }
 ```
 ```typescript
 // bad -> if statements must be braced
-if (result.type === 'JSON') 
+if (result.type === 'JSON')
     return res;
 ```
- 
+
 <!-- **forin:** Requires a `for ... in` statement to be filtered with an `if` statement. -->
- 
-  2.2 **import-blacklist:** 
+
+  2.2 **import-blacklist:**
 Disallows importing the specified modules directly via `import` and `require`.
 Instead only sub modules may be imported from that module.
 Some libraries allow importing their submodules instead of the entire module. This is good practise as it avoids loading unused modules.
@@ -263,9 +263,9 @@ import has from 'lodash/has';
 // bad -> This import is blacklisted, import a submodule instead
 import _ from 'lodash';
 ```
- 
+
   2.3 **label-position:** Only allows labels in sensible locations(like switch-cases).
-Labels can be used in combination with `break`, `continue` and `switch`. 
+Labels can be used in combination with `break`, `continue` and `switch`.
 
 ```typescript
 // bad -> unexpected label on statement
@@ -273,7 +273,7 @@ function foo() {
     barLabel:
 }
 ```
- 
+
   2.4 **no-arg:** Disallows use of `arguments.callee`.
 Usage of `arguments.callee` makes many optimizations impossible and almost every case can be expressed without.
 
@@ -296,7 +296,7 @@ Bitwise operations are often typos(& instead of &&) and when used correctly they
 const eight: number = 0b1001 & 0b1000;
 ```
 
-  2.6 **no-conditional-assignment:** Disallows any type of assignment in conditionals. 
+  2.6 **no-conditional-assignment:** Disallows any type of assignment in conditionals.
 That happens mostly when you confuse `=` with `==`.
 
 ```typescript
@@ -305,7 +305,7 @@ if (i = true) {
 
 }
 ```
- 
+
   2.7 **no-console:** Bans the use of specified `console` methods.
 ```typescript
 // bad -> Calls to 'console.log' are not allowed.
@@ -332,7 +332,7 @@ debugger;
 let two: number = 2;
 let two: string = "two";
 ```
- 
+
   2.11 **no-empty:** Disallows empty blocks.
 ```typescript
 // bad -> block is empty
@@ -348,13 +348,13 @@ function doNothing(): void {
 ((eval("2+2") + 2) === 6)
 
 ```
- 
+
 <!-- **no-floating-promises:** Promises returned by functions must be handled appropriately. Requires type info-->
- 
+
 <!-- **no-for-in-array:** Disallows iterating over an array with a for-in loop. -->
- 
+
 <!-- **no-inferred-empty-object-type:** Disallow type inference of {} (empty object type) at function and constructor call sites -->
- 
+
   2.13 **no-invalid-this:** Disallows using the `this` keyword outside of classes.
 ```typescript
 // good
@@ -384,7 +384,7 @@ declare class C {
 ```
 
 <!-- **no-null-keyword:** Disallows use of the `null` keyword literal. -->
- 
+
   2.15 **no-shadowed-variable:** Disallows shadowing variable declarations.
 ```typescript
 // bad -> Shadowed variable: 'a'
@@ -397,7 +397,7 @@ function letShadow() {
 ```
 
 <!-- **no-string-literal:** Disallows object access via string literals. -->
- 
+
   2.16 **no-string-throw:** Flags throwing plain strings or concatenations of strings because only Errors produce proper stack traces.
 ```typescript
 // good
@@ -412,20 +412,20 @@ function Bar(): void {
 }
 ```
 <!-- **no-switch-case-fall-through:** Disallows falling through case statements. -->
- 
- 
+
+
 <!-- **no-unbound-method:** Warns when a method is used as outside of a method call. -->
- 
+
 
 <!-- **no-unsafe-any:**  -->
 <!-- Warns when using an expression of type ‘any’ in an unsafe way. -->
 <!-- Type casts and tests are allowed. -->
 <!-- Expressions that work on all values (such as ‘”” + x’) are allowed. -->
- 
+
 <!-- **no-unsafe-finally:**  -->
 <!-- Disallows control flow statements, such as `return`, :`continue`, -->
 <!-- `break` and `throws` in finally blocks. -->
- 
+
   2.17 **no-unused-expression:** Disallows unused expression statements. Unused expressions are expression statements which are not assignments or function calls.
 ```typescript
 // bad -> expected an assignment or function call
@@ -449,7 +449,7 @@ class Bar {
 		doTheThing();
 	}
 }
-new Bar(); 
+new Bar();
 ``` -->
 
 <!-- **no-unused-variable:** Disallows unused imports, variables, functions and private class members. -->
@@ -471,15 +471,15 @@ const bar;
 ```
 ```typescript
 // bad -> Forbidden 'var' keyword, use 'let' or 'const' instead
-var qux; 
+var qux;
 ```
- 
+
 <!-- **no-void-expression:** Requires expressions of type `void` to appear in statement position. -->
- 
+
 <!-- **radix:** Requires the radix parameter to be specified when calling `parseInt`. -->
- 
+
 <!-- **restrict-plus-operands:** When adding two variables, operands must both be of type number or of type string. -->
- 
+
 <!-- **strict-boolean-expressions:**  -->
 <!-- Restricts the types allowed in boolean expressions. By default only booleans are allowed. -->
 
@@ -487,14 +487,14 @@ var qux;
 <!-- * Arguments to the ‘!’, ‘&amp;&amp;’, and ‘||’ operators -->
 <!-- * The condition in a conditional expression (‘cond ? x : y’) -->
 <!-- * Conditions for ‘if’, ‘for’, ‘while’, and ‘do-while’ statements. -->
- 
+
 <!-- **strict-type-predicates:**  -->
 <!-- Warns for type predicates that are always true or always false. -->
 <!-- Works for ‘typeof’ comparisons to constants (e.g. ‘typeof foo === “string”’), and equality comparison to ‘null’/’undefined’. -->
 <!-- (TypeScript won’t let you compare ‘1 === 2’, but it has an exception for ‘1 === undefined’.) -->
 <!-- Does not yet work for ‘instanceof’. -->
 <!-- Does <em>not</em> warn for ‘if (x.y)’ where ‘x.y’ is always truthy. For that, see strict-boolean-expressions. -->
- 
+
   2.20 **switch-default:** Require a `default` case in all `switch` statements.
 ```typescript
 // good
@@ -543,7 +543,7 @@ isNaN('2' + 2);
 ```
 
 #Maintainability
- 
+
   3.1 **cyclomatic-complexity:** Enforces a threshold of cyclomatic complexity(McCabe complexity).
 Does not refer to the number of instructions but rather to the number of paths.
 Influenced by switchcases, `catch`, `if` and `? :` `||` and `&&` and any kind of loop.
@@ -574,15 +574,15 @@ function numberIsEven(num: number): boolean {
   }
 }
 ```
- 
+
   3.2 **eofline:** Ensures the file ends with a newline.
 Posix defines a line as a number of characters ending with the newline. Most software will recognize the last line anyways, but you should not rely on that.
- 
-  3.3 **indent:** Enforces indentation spaces.
+
+  3.3 **indent:** Enforces indentation spaces. As soon as this rule supports setting the number of spaces per indentation it will be set to 2 spaces in the 5Minds-tslint-config.
 
   3.4 **linebreak-style:** Enforces a consistent linebreak style. You may choose between `CRLF` and `LF`, referencing the control characters `carriage return \r` and `line feed (\n).
 Windows uses CRLF; Unix uses LF.
- 
+
   3.5 **max-classes-per-file:** A file may not contain more than the specified number of classes
 ```typescript
 class Foo {
@@ -592,18 +592,18 @@ class Foo {
 ```typescript
 // bad -> [tslint] A maximum of 1 class per file is allowed (max-classes-per-file)
 class Bar {
-    
+
 }
 ```
- 
+
   3.6 **max-file-line-count:** Requires files to remain under 3000 lines
- 
+
   3.7 **max-line-length:** Requires lines to be under a certain max length.
 ```typescript
 // bad -> Exceeds maximum line length of 150
 const deviceIsMobile: boolean = document.documentElement.clientWidth < 800 || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPhone/i);
 ```
- 
+
   3.8 **no-default-export:** Disallows default exports in ES6-style modules.
 ```typescript
 // good
@@ -618,7 +618,7 @@ export default class Foo {
 }
 
 ```
- 
+
   3.9 **no-mergeable-namespace:** Disallows mergeable namespaces in the same file.
 ```typescript
 namespace RegExpNamespace {
@@ -629,7 +629,7 @@ namespace RegExpNamespace {
     const numberRegexp = /^[0-9]+$/;
 }
 ```
- 
+
   3.10 **no-require-imports:** Disallows invocation of require()`.
 ```typescript
 // good
@@ -643,26 +643,26 @@ const path = require('path');
 // bad -> require() style import is forbidden
 import path = require('path');
 ```
- 
+
   3.11 **no-trailing-whitespace:** Disallows trailing whitespace at the end of a line.
- 
+
 <!-- **object-literal-sort-keys:** Requires keys in object literals to be sorted alphabetically -->
 <!-- ``` -->
 
 <!-- ``` -->
- 
+
   3.12 **prefer-const:** Requires that variable declarations use `const` instead of `let` if possible.
 ```typescript
 function context() {
-    // good
-	const e: number = 2.72;
-	
-	// bad -> Identifier 'pi' is never reassigned; use 'const' instead of 'let'.
-    let pi: number = 3.14;
+  // good
+  const e: number = 2.72;
+
+  // bad -> Identifier 'pi' is never reassigned; use 'const' instead of 'let'.
+  let pi: number = 3.14;
 }
 
 ```
- 
+
   3.13 **trailing-comma:** Requires or disallows trailing commas in array and object literals, destructuring assignments, function and tuple typings,
 named imports and function parameters.
 ```typescript
@@ -679,9 +679,9 @@ const carList: Array<string> = [
     'Mercedes'
 ];
 ```
- 
+
 #Style
- 
+
   4.1 **align:** Enforces vertical alignment.
 
 ```typescript
@@ -697,13 +697,13 @@ function tokenize(text: string,
     returnTokens: boolean): Array<string>;
 
 ```
- 
+
   4.2 **array-type:** Requires using `Array<T>` for arrays.
 ```typescript
 // bad -> Array type using 'T[]' is forbidden. Use 'Array<T>' instead.
 const languages: string[] = ['TypeScript', 'JavaScript' , 'C'];
 ```
- 
+
   4.3 **arrow-parens:** Requires parentheses around the parameters of arrow function definitions.
 ```typescript
 // bad -> Parentheses are required around the parameters of an arrow function definition
@@ -711,17 +711,17 @@ unknown => {
     return typeof unknown;
 }
 ```
- 
+
 <!-- **arrow-return-shorthand:** Suggests to convert `() =&gt; { return x; }` to `() =&gt; x`. -->
 <!-- ``` -->
 
 <!-- ``` -->
- 
+
 <!-- **callable-types:** An interface or literal type with just a call signature can be written as a function type. -->
 <!-- ``` -->
 
 <!-- ``` -->
- 
+
   4.4 **class-name:** Enforces PascalCased class and interface names.
 ```typescript
 // good
@@ -741,27 +741,27 @@ class snake_case {
 
 }
 ```
- 
+
   4.5 **comment-format:** Enforces formatting rules for single-line comments.
 ```typescript
-// good 
+// good
 // I start with a space
 ```
 ```typescript
 // bad -> comment must start with a space
 //I start directly
 ```
- 
+
 <!-- **completed-docs:** Enforces documentation for important items be filled out. -->
 <!-- ``` -->
 
 <!-- ``` -->
- 
+
 <!-- **file-header:** Enforces a certain header comment for all files, matched by a regular expression. -->
 <!-- ``` -->
 
 <!-- ``` -->
- 
+
   4.6 **import-spacing:** Ensures proper spacing between import statement keywords
 ```typescript
 // good
@@ -773,7 +773,7 @@ import * as path from 'path';
 import*as fs from 'fs';
 
 ```
- 
+
 <!--   4.7 **interface-name:** Requires interface names to begin with a capital ‘I’ -->
 <!-- ```typescript -->
 <!-- // good -->
@@ -791,17 +791,17 @@ import*as fs from 'fs';
 <!--     draw(): void; -->
 <!-- } -->
 <!-- ``` -->
- 
+
 <!--   4.8 **interface-over-type-literal:** Prefer an interface declaration over a type literal (`type T = { ... }`) -->
 <!-- ```typescript -->
 
 <!-- ``` -->
- 
+
 <!--   4.9 **jsdoc-format:** Enforces basic format rules for JSDoc comments. -->
 <!-- ```typescript -->
 
 <!-- ``` -->
- 
+
   4.7 **new-parens:** Requires parentheses when invoking a constructor via the `new` keyword.
 ```typescript
 class Foo {
@@ -813,25 +813,42 @@ let foo = new Foo();
 // bad -> Parentheses are required when invoking a constructor
 foo = new Foo;
 ```
- 
+
 <!--   4.11 **no-angle-bracket-type-assertion:** Requires the use of `as Type` for type assertions instead of `&lt;Type&gt;`. -->
 <!-- ```typescript -->
 
 <!-- ``` -->
- 
+
 <!--   4.12 **no-boolean-literal-compare:** Warns on comparison to a boolean literal, as in `x === true`. -->
 <!-- ```typescript -->
 
 <!-- ``` -->
- 
-  4.8 **no-consecutive-blank-lines:** Disallows one or more blank lines in a row.
-  
-<!--   4.14 **no-parameter-properties:** Disallows parameter properties in class constructors. -->
-<!-- ```typescript -->
 
-<!-- ``` -->
- 
-  4.9 **no-unnecessary-initializer:** Forbids a ‘var’/’let’ statement or destructuring initializer to be initialized to ‘undefined’.
+  4.8 **no-consecutive-blank-lines:** Disallows one or more blank lines in a row.
+
+  4.9 **no-parameter-properties:** Disallows parameter properties in class constructors.
+```typescript
+// good
+class Foo {
+
+  private bar: Bar;
+
+  constructor(bar: Bar) {
+    this.bar = bar;
+  }
+
+}
+```
+```typescript
+// bad
+class Foo {
+
+  constructor(private bar: Bar) {}
+
+}
+```
+
+  4.10 **no-unnecessary-initializer:** Forbids a ‘var’/’let’ statement or destructuring initializer to be initialized to ‘undefined’.
 ```typescript
 // good
 const undefinedAlias = undefined;
@@ -844,13 +861,13 @@ let notInitialized;
 // bad -> Unnecessary initialization to 'undefined'.
 let initialized = undefined;
 ```
- 
-<!--   4.16 **no-unnecessary-qualifier:** Warns when a namespace qualifier (`A.x`) is unnecessary. -->
+
+<!--   4.11 **no-unnecessary-qualifier:** Warns when a namespace qualifier (`A.x`) is unnecessary. -->
 <!-- ```typescript -->
 
 <!-- ``` -->
- 
-  4.10 **object-literal-key-quotes:** Enforces consistent object literal property quote style.
+
+  4.11 **object-literal-key-quotes:** Enforces consistent object literal property quote style.
 ```typescript
 const obj = {
   // good
@@ -859,33 +876,33 @@ const obj = {
   'qux': 'baz',
 };
 ```
- 
+
 <!--   4.18 **object-literal-shorthand:** Enforces use of ES6 object literal shorthand when possible. -->
 <!-- ```typescript -->
 
 <!-- ``` -->
- 
-  4.11 **one-line:** Requires the specified tokens to be on the same line as the expression preceding them.
+
+  4.12 **one-line:** Requires the specified tokens to be on the same line as the expression preceding them.
 
 ```typescript
 // good
 try {
-  parseInt('r2d2');
+    parseInt('r2d2');
 } catch (error) {
-  console.error(error);
+    console.error(error);
 }
 ```
 ```typescript
 // bad -> misplaced 'catch'
 try {
-  parseInt('c3p0');
+    parseInt('c3p0');
 }
 catch (error) {
-  console.error(error);
+    console.error(error);
 }
 ```
- 
-  4.12 **one-variable-per-declaration:** Disallows multiple variable definitions in the same declaration statement.
+
+  4.13 **one-variable-per-declaration:** Disallows multiple variable definitions in the same declaration statement.
 ```typescript
 // good
 const foo;
@@ -895,8 +912,8 @@ const bar = true;
 // bad -> Multiple variable declarations in the same statement are forbidden
 const foo, bar = true;
 ```
- 
-  4.13 **ordered-imports:** Requires that import statements be alphabetized.
+
+  4.14 **ordered-imports:** Requires that import statements be alphabetized.
 ```typescript
 // good
 import * as BluebirdPromise from 'bluebird';
@@ -907,13 +924,13 @@ import * as Express from 'express';
 import * as Express from 'express';
 import * as BluebirdPromise from 'bluebird';
 ```
- 
+
 <!--   4.22 **prefer-function-over-method:** Warns for methods that do not use ‘this’. -->
 <!-- ```typescript -->
 
 <!-- ``` -->
- 
-  4.14 **prefer-method-signature:** Prefer `foo(): void` over `foo: () => void` in interfaces and types.
+
+  4.15 **prefer-method-signature:** Prefer `foo(): void` over `foo: () => void` in interfaces and types.
 ```typescript
 // good
 interface ICanvas {
@@ -926,8 +943,8 @@ interface ICanvas {
   draw: () => void;
 }
 ```
- 
-  4.15 **quotemark:** Requires single or double quotes for string literals.
+
+  4.16 **quotemark:** Requires single or double quotes for string literals.
 
 ```typescript
 // good
@@ -945,8 +962,8 @@ const anyText: string = "nor is he early";
 // bad -> " should be '
 const singleQuoteChar: string = "'";
 ```
- 
-  4.16 **semicolon:** Enforces consistent semicolon usage at the end of every statement.
+
+  4.17 **semicolon:** Enforces consistent semicolon usage at the end of every statement.
 ```typescript
 // good
 const good: string = 'presence of semicolon';
@@ -955,8 +972,8 @@ const good: string = 'presence of semicolon';
 // bad -> lack of semicolon
 const bad: string = 'lack of semicolon'
 ```
- 
-  4.17 **space-before-function-paren:** Require or disallow a space before function parenthesis
+
+  4.18 **space-before-function-paren:** Require or disallow a space before function parenthesis
 ```typescript
 // good
 function foo(): void {
@@ -969,8 +986,8 @@ function bar (): void {
 
 }
 ```
- 
-  4.18 **variable-name:** Checks variable names for various errors.
+
+  4.19 **variable-name:** Checks variable names for various errors.
 ```typescript
 // good
 const STATIC_PI: number = 3.14;
@@ -999,8 +1016,8 @@ let PascalCased;
 // bad -> variable name must be in camelcase or uppercase
 let snake_case;
 ```
- 
-  4.19 **whitespace:** Enforces whitespace style conventions.
+
+  4.20 **whitespace:** Enforces whitespace style conventions.
 
 ```typescript
 // good
