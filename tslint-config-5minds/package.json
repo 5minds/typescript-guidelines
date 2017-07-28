@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/5minds/JS.Foundation.git"
+    "url": "git+https://github.com/5minds/typescript-guidelines.git"
   },
   "keywords": [
     "tslint"
@@ -17,9 +17,9 @@
   "maintainer": "Heiko Mathes <heiko.mathes@5minds.de>",
   "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
-    "url": "https://github.com/5minds/JS.Foundation/issues"
+    "url": "https://github.com/5minds/typescript-guidelines/issues"
   },
-  "homepage": "https://github.com/5minds/JS.Foundation#readme",
+  "homepage": "https://github.com/5minds/typescript-guidelines#readme",
   "peerDependencies": {
     "tslint": "^5.1.0",
     "typescript": "^2.1.4"
