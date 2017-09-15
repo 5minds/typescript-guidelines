@@ -1,0 +1,29 @@
+{
+  "name": "tslint-eslint-config-5minds",
+  "version": "1.0.0",
+  "description": "tslint+eslint-rules we use at 5minds",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/5minds/typescript-guidelines.git"
+  },
+  "keywords": [
+    "tslint"
+  ],
+  "author": "5Minds IT-Solutions GmbH & Co. KG <info@5minds.de>",
+  "maintainer": "Heiko Mathes <heiko.mathes@5minds.de>",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/5minds/typescript-guidelines/issues"
+  },
+  "homepage": "https://github.com/5minds/typescript-guidelines#readme",
+  "peerDependencies": {
+    "tslint": "^5.1.0",
+    "typescript": "^2.1.4"
+  },
+  "dependencies": {
+    "eslint-config-5minds": "^0.1.0",
+    "tslint-config-5minds": "^1.0.5",
+    "tslint-eslint-rules": "^4.1.1"
+  }
+}
