@@ -1,6 +1,6 @@
 {
   "name": "tslint-eslint-config-5minds",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "tslint+eslint-rules we use at 5minds",
   "main": "index.js",
   "repository": {

@@ -1,4 +1,4 @@
-# TSLint + ESLint config for 5Minds projects
+# TSLint + ESLint rule set recommendation by 5Minds
 
 - install with `npm install --save-dev tslint-eslint-config-5minds`
 - create a tslint.json in your project with the following content:
@@ -7,5 +7,4 @@
 {
     "extends": "tslint-eslint-config-5minds"
 }
-````
-
+```
