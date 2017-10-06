@@ -23,6 +23,7 @@
     "no-var-requires": true,
     "only-arrow-functions": [true, "allow-named-functions"],
     "prefer-for-of": true,
+    "prefer-object-spread": true,
     "promise-function-async": false,
     "typedef": [
       true,
@@ -74,6 +75,7 @@
     "no-string-literal": false,
     "no-string-throw": true,
     "no-switch-case-fall-through": false,
+    "no-this-assignment": true,
     "no-unsafe-finally": false,
     "no-unused-expression": [true, "allow-fast-null-checks"],
     "no-use-before-declare": true,
@@ -88,7 +90,7 @@
 
     "cyclomatic-complexity": [true, 20],
     "eofline": true,
-    "indent": [true, "spaces"],
+    "indent": [true, "spaces", 2],
     "linebreak-style": [true, "LF"],
     "max-classes-per-file": [true, 1],
     "max-file-line-count": [true, 3000],
@@ -101,7 +103,7 @@
     "prefer-const": true,
     "trailing-comma": [true, {"multiline": "always", "singleline": "never"}],
 
-    "align": [true, "parameters", "arguments", "statements"],
+    "align": [true, "parameters", "statements"],
     "array-type": [true, "generic"],
     "arrow-parens": true,
     "arrow-return-shorthand": [false],
