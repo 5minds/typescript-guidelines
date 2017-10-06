@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/5minds/typescript-guidelines#readme",
   "peerDependencies": {
-    "tslint": "^5.1.0",
+    "tslint": "^5.7.0",
     "typescript": "^2.1.4"
   }
 }
