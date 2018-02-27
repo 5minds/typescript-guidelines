@@ -3,5 +3,8 @@
     "tslint-eslint-rules",
     "eslint-config-5minds",
     "tslint-config-5minds"
-  ]
+  ],
+  "rules": {
+    "valid-jsdoc": false,
+  }
 }
