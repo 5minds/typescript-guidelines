@@ -5,6 +5,6 @@
     "tslint-config-5minds"
   ],
   "rules": {
-    "valid-jsdoc": false,
+    "valid-jsdoc": false
   }
 }
