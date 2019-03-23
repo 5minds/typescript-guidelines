@@ -78,7 +78,6 @@
     "ban-comma-operator": true,
     "ban": {
       "options": [
-        {"name": ["arguments", "callee"], "message": "arguments.callee is deprecated"},
         {"name": ["global", "isFinite"], "message": "Please use Number.isFinite instead"},
         {"name": ["self", "isFinite"], "message": "Please use Number.isFinite instead"},
         {"name": ["window", "isFinite"], "message": "Please use Number.isFinite instead"},
