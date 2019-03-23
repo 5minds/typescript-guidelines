@@ -902,13 +902,7 @@ parseInt('2') === 2;
 `2` == 2;
 ```
 
-  2.39 **typeof-compare:** Makes sure result of `typeof` is compared to correct string values
-```typescript
-// bad -> 'typeof' expression must be compared to one of: "undefined", "string", "boolean", "number", "function", "object", "symbol"
-typeof (new Date()) === 'date';
-```
-
-  2.40 **unnecessary-constructor**: Prevents blank constructors, as they are redundant.
+  2.39 **unnecessary-constructor**: Prevents blank constructors, as they are redundant.
 
 ```typescript
 // good
@@ -937,7 +931,7 @@ export class Test1 {
 }
 ```
 
-  2.41 **use-isnan:** Enforces use of the `isNaN()` function to check for NaN references instead of a comparison to the `NaN` constant.
+  2.40 **use-isnan:** Enforces use of the `isNaN()` function to check for NaN references instead of a comparison to the `NaN` constant.
 ```typescript
 // good
 isNaN('2' + 2);
