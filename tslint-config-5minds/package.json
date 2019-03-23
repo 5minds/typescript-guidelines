@@ -1,6 +1,6 @@
 {
   "name": "tslint-config-5minds",
-  "version": "1.0.6",
+  "version": "2.0.0",
   "description": "tslint-rules we use at 5minds",
   "main": "index.js",
   "scripts": {
