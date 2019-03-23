@@ -8,9 +8,15 @@ module.exports = require('./tslint.json');
 "no-void-expression": true,
 "no-unbound-method": true,
 "restrict-plus-operands": true,
+"no-unnecessary-type-assertion": true,
 
 "no-boolean-literal-compare": true,
 "no-unnecessary-qualifier": true,
+"deprecation": true,
+"prefer-readonly": true,
+"match-default-export-name": true,
+"return-undefined": true,
+"unnecessary-bind": true,
 */
 
 /*
