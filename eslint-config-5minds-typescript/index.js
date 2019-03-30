@@ -1,6 +1,6 @@
 module.exports  = {
-  "extends": "5minds",
-  "parser": "@typescript-eslint/parser",
+  "extends": require.resolve('eslint-config-5minds'),
+  "parser": require.resolve('@typescript-eslint/parser'),
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module"
