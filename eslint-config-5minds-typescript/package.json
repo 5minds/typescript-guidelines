@@ -21,11 +21,11 @@
   "dependencies": {
     "eslint-config-5minds": "^1.0.0-alpha.1",
     "eslint": "^5.16.0",
-    "eslint-plugin-6river": "^1.0.6",
-    "@typescript-eslint/eslint-plugin": "^1.5.0",
+    "typescript": "~3.3.4000",
     "@typescript-eslint/parser": "^1.5.0"
   },
-  "peerDependencies": {
-    "eslint": "^5.16.0"
+  "peedDependencies": {
+    "eslint-plugin-6river": "^1.0.6",
+    "@typescript-eslint/eslint-plugin": "^1.5.0"
   }
 }
