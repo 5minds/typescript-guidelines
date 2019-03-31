@@ -37,7 +37,9 @@ value. At the time of writing this, these are these rules:
 It is nice to be able to use these rules, but they come with a caveat:
 Providing the parserServices is **very** slow. Linting a big project
 took 5 sec. (7 sec. cpu time) without parserServices, and 150 sec.
-(250 sec. cpu time) with parserServices.
+(250 sec. cpu time) with parserServices. (see
+https://github.com/typescript-eslint/typescript-eslint/issues/243 and
+https://github.com/typescript-eslint/typescript-eslint/issues/389)
 
 Because of this, this package exposes an additional ruleset, that
 is identical to the default ruleset, but with the rules that require
