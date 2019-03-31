@@ -4,7 +4,10 @@
 - create a `.eslintrc.json` with
   ```
   {
-    "extends": "5minds-typescript"
+    "extends": "5minds-typescript",
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    }
   }
   ```
 - create a `.eslintignore` (like a `.gitignore`) with all the folders
@@ -19,4 +22,29 @@
       "autoFix": true
     }
   ]
+  ```
+
+# Faster linting
+some special rules require parserServices to be generated. In the
+default setup, this is done be providing the `parserOptions.project`
+value. At the time of writing this, these are these rules:
+
+- [@typescript-eslint/no-for-in-array](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-for-in-array.md)
+- [@typescript-eslint/no-unnecessary-qualifier](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unnecessary-qualifier)
+- [@typescript-eslint/no-unnecessary-type-assertion](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unnecessary-type-assertion)
+- [@typescript-eslint/restrict-plus-operands](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/restrict-plus-operands)
+
+It is nice to be able to use these rules, but they come with a caveat:
+Providing the parserServices is **very** slow. Linting a big project
+took 5 sec. (7 sec. cpu time) without parserServices, and 150 sec.
+(250 sec. cpu time) with parserServices.
+
+Because of this, this package exposes an additional ruleset, that
+is identical to the default ruleset, but with the rules that require
+parserServices disabled. To use this ruleset edit your
+`.eslintrc.json` so it looks like this (no `parserOptions` required!):
+  ```
+  {
+    "extends": "5minds-typescript/fast",
+  }
   ```
