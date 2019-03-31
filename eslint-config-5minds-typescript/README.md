@@ -1,6 +1,15 @@
 # ESLint config for 5Minds TypeScript projects
 
 - install with `npm install --save-dev eslint-config-5minds-typescript`
+- install the necessary plugins and parsers with
+  ```
+  npm install \
+    @typescript-eslint/parser \
+    @typescript-eslint/eslint-plugin \
+    eslint-plugin-6river \
+    eslint-plugin-import \
+    eslint-plugin-no-null
+  ```
 - create a `.eslintrc.json` with
   ```
   {
