@@ -1,8 +1,11 @@
 # ESLint config for 5Minds TypeScript projects
 
-- install with `npm install --save-dev eslint-config-5minds-typescript`
-- install the necessary plugins and parsers with
+- install with
   ```
+  npm install --save-dev eslint-config-5minds-typescript
+  ```
+- install the necessary plugins and parsers with
+  ```bash
   npm install \
     @typescript-eslint/parser \
     @typescript-eslint/eslint-plugin \
@@ -11,7 +14,7 @@
     eslint-plugin-no-null
   ```
 - create a `.eslintrc.json` with
-  ```
+  ```json
   {
     "extends": "5minds-typescript",
     "parserOptions": {
@@ -24,13 +27,19 @@
 - If you're using the VSCode eslint extension, add this to your config
   to make it lint typescript files (you can set `autofix` to false if
   you want):
-  ```
+  ```json
   "eslint.validate": [
     {
       "language": "typescript",
       "autoFix": true
     }
   ]
+  ```
+- consider adding a lint-script to your package.json:
+  ```json
+  scripts: {
+    "lint": "eslint --fix ./**/*.ts"
+  }
   ```
 
 # Faster linting
