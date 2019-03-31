@@ -63,8 +63,8 @@ Because of this, this package exposes an additional ruleset, that
 is identical to the default ruleset, but with the rules that require
 parserServices disabled. To use this ruleset edit your
 `.eslintrc.json` so it looks like this (no `parserOptions` required!):
-  ```
+  ```json
   {
-    "extends": "5minds-typescript/fast",
+    "extends": "5minds-typescript/fast"
   }
   ```
