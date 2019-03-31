@@ -29,11 +29,11 @@ module.exports  = {
     'camelcase': 'off',
     '@typescript-eslint/camelcase': ["error", { "properties": "always" }],
     '@typescript-eslint/class-name-casing': ['error'],
-    '@typescript-eslint/explicit-function-return-type': ['error', {'allowTypedFunctionExpressions': true}],
+    '@typescript-eslint/explicit-function-return-type': ['error'],
     '@typescript-eslint/explicit-member-accessibility': ['error'],
     '@typescript-eslint/generic-type-naming': ['error', '^T[A-Z][a-zA-Z]+$'],
     "indent": "off",
-    '@typescript-eslint/indent': ['error', '2'],
+    '@typescript-eslint/indent': ['error', 2],
     '@typescript-eslint/interface-name-prefix': ['error'],
     '@typescript-eslint/member-delimiter-style': ['error', {
       "multiline": {
