@@ -30,11 +30,13 @@ module.exports  = {
     '@typescript-eslint/camelcase': ["error", { "properties": "always" }],
     '@typescript-eslint/class-name-casing': ['error'],
     '@typescript-eslint/explicit-function-return-type': ['error'],
-    '@typescript-eslint/explicit-member-accessibility': ['error'],
+    // disabled until we can configure it to not ne required for constructors
+    // https://github.com/typescript-eslint/typescript-eslint/pull/322
+    '@typescript-eslint/explicit-member-accessibility': ['off'],
     '@typescript-eslint/generic-type-naming': ['error', '^T[A-Z][a-zA-Z]+$'],
     "indent": "off",
     '@typescript-eslint/indent': ['error', 2],
-    '@typescript-eslint/interface-name-prefix': ['error'],
+    '@typescript-eslint/interface-name-prefix': ['error', 'always'],
     '@typescript-eslint/member-delimiter-style': ['error', {
       "multiline": {
         "delimiter": "semi",
@@ -71,19 +73,8 @@ module.exports  = {
         "constructor",
 
         // methods
-        "public-static-method",
-        "protected-static-method",
-        "private-static-method",
-        "public-instance-method",
-        "protected-instance-method",
-        "private-instance-method",
-
-        "public-method",
-        "protected-method",
-        "private-method",
         "static-method",
-        "instance-method",
-        "method"
+        "instance-method"
       ]
     }],
     '@typescript-eslint/no-angle-bracket-type-assertion': 'off',
