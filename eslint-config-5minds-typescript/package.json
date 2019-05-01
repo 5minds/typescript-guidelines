@@ -19,7 +19,7 @@
     "editorconfig"
   ],
   "dependencies": {
-    "eslint-config-5minds": "^1.0.0",
+    "eslint-config-5minds": "^1.0.1",
     "eslint": "^5.16.0",
     "typescript": "~3.4.5"
   },
