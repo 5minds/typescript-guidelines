@@ -6,7 +6,7 @@
   ```
 - install the necessary plugins and parsers with
   ```bash
-  npm install \
+  npm install --save-dev \
     @typescript-eslint/parser \
     @typescript-eslint/eslint-plugin \
     eslint-plugin-6river \
