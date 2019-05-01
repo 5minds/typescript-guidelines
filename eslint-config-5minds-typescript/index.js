@@ -30,9 +30,7 @@ module.exports  = {
     '@typescript-eslint/camelcase': ["error", { "properties": "always" }],
     '@typescript-eslint/class-name-casing': ['error'],
     '@typescript-eslint/explicit-function-return-type': ['error'],
-    // disabled until we can configure it to not ne required for constructors
-    // https://github.com/typescript-eslint/typescript-eslint/pull/322
-    '@typescript-eslint/explicit-member-accessibility': ['off'],
+    '@typescript-eslint/explicit-member-accessibility': ['error', {'overrides': {'constructors': 'no-public'}}],
     '@typescript-eslint/generic-type-naming': ['error', '^T[A-Z][a-zA-Z]+$'],
     "indent": "off",
     '@typescript-eslint/indent': ['error', 2],
@@ -100,12 +98,16 @@ module.exports  = {
     '@typescript-eslint/no-use-before-define': ['error'],
     '@typescript-eslint/no-useless-constructor': ['error'],
     '@typescript-eslint/no-var-requires': ['error'],
+    '@typescript-eslint/prefer-for-of': ['error'],
     '@typescript-eslint/prefer-function-type': ['error'],
+    '@typescript-eslint/prefer-includes': ['error'],
     '@typescript-eslint/prefer-interface': ['error'],
     '@typescript-eslint/prefer-namespace-keyword': 'off',
+    '@typescript-eslint/prefer-string-starts-ends-with': ['error'],
     '@typescript-eslint/promise-function-async': 'off',
     '@typescript-eslint/restrict-plus-operands': ['error'],
     '@typescript-eslint/type-annotation-spacing': ['error'],
+    '@typescript-eslint/unbound-method': ['error', {'ignoreStatic': true}],
     '@typescript-eslint/unified-signatures': ['error']
   },
 
