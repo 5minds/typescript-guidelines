@@ -43,7 +43,7 @@
   ```
 
 # Faster linting
-some special rules require parserServices to be generated. In the
+Some special rules require `parserServices` to be generated. In the
 default setup, this is done be providing the `parserOptions.project`
 value. At the time of writing this, these are these rules:
 
