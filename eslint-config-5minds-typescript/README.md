@@ -13,7 +13,7 @@
     eslint-plugin-import \
     eslint-plugin-no-null
   ```
-- create a `.eslintrc.json` with
+- create a `.eslintrc.json` file with
   ```json
   {
     "extends": "5minds-typescript",
