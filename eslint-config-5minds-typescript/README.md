@@ -22,7 +22,7 @@
     }
   }
   ```
-- create a `.eslintignore` (like a `.gitignore`) with all the folders
+- create a `.eslintignore` file (like a `.gitignore` file) with all the folders
   you dont want linted (e.g. like `node_modules` and `dist`)
 - If you're using the VSCode eslint extension, add this to your config
   to make it lint typescript files (you can set `autofix` to false if
