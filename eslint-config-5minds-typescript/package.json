@@ -1,0 +1,31 @@
+{
+  "name": "eslint-config-5minds-typescript",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "version": "1.0.0-alpha.5",
+  "description": "Provide the eslint configs",
+  "main": "index.js",
+  "author": "5Minds IT-Solutions GmbH & Co. KG <info@5minds.de>",
+  "maintainer": "Martin Möllenbeck <martin.moellenbeck@5minds.de>",
+  "homepage": "https://github.com/5minds/typescript-guidelines",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/5minds/typescript-guidelines"
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "keywords": [
+    "eslint",
+    "editorconfig"
+  ],
+  "dependencies": {
+    "eslint-config-5minds": "^1.0.2",
+    "eslint": "^5.16.0",
+    "typescript": "~3.4.5"
+  },
+  "peerDependencies": {
+    "eslint-plugin-6river": "^1.0.6",
+    "@typescript-eslint/eslint-plugin": "^1.7.0",
+    "@typescript-eslint/parser": "^1.7.0"
+  }
+}
