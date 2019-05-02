@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.5",
   "description": "Provide the eslint configs",
   "main": "index.js",
   "author": "5Minds IT-Solutions GmbH & Co. KG <info@5minds.de>",
@@ -19,7 +19,7 @@
     "editorconfig"
   ],
   "dependencies": {
-    "eslint-config-5minds": "^1.0.1",
+    "eslint-config-5minds": "^1.0.2",
     "eslint": "^5.16.0",
     "typescript": "~3.4.5"
   },
