@@ -45,7 +45,7 @@
 # Faster linting
 Some special rules require `parserServices` to be generated. In the
 default setup, this is done by providing the `parserOptions.project`
-value. At the moment, this must be done for the following:
+value. At the moment, this must be done for the following rules:
 
 - [@typescript-eslint/no-for-in-array](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-for-in-array.md)
 - [@typescript-eslint/no-unnecessary-qualifier](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unnecessary-qualifier.md)
