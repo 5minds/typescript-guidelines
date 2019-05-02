@@ -19,7 +19,7 @@ module.exports  = {
     '@typescript-eslint/array-type': ['error', 'generic'],
     '@typescript-eslint/ban-types': ['error', {
       "types": {
-        'Object': "Use {} instead.",
+        'Object': "Use object instead.",
         'String': "Use 'string' instead.",
         'Number': "Use 'number' instead.",
         'Boolean': "Use 'boolean' instead."
