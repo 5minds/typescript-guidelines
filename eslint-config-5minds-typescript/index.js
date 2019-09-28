@@ -16,7 +16,7 @@ module.exports  = {
     }],
 
     '@typescript-eslint/adjacent-overload-signatures': ['error'],
-    '@typescript-eslint/array-type': ['error', 'generic'],
+    '@typescript-eslint/array-type': ['error', {'default': 'generic'}],
     '@typescript-eslint/ban-types': ['error', {
       "types": {
         'Object': "Use object instead.",
@@ -75,21 +75,33 @@ module.exports  = {
         "instance-method"
       ]
     }],
-    '@typescript-eslint/no-angle-bracket-type-assertion': 'off',
     '@typescript-eslint/no-array-constructor': ['error'],
     '@typescript-eslint/no-empty-interface': ['error'],
     '@typescript-eslint/no-explicit-any': ['error'],
     '@typescript-eslint/no-extraneous-class': ['error'],
+    '@typescript-eslint/no-floating-promises': ['error'],
     '@typescript-eslint/no-for-in-array': ['error'],
     '@typescript-eslint/no-inferrable-types': ['error'],
+    "no-magic-numbers": 'off',
+    '@typescript-eslint/no-magic-numbers': ['error', {
+      'ignoreReadonlyClassProperties': true,
+      'ignoreEnums': true,
+      'ignore': [
+        -1, 0, 1, // for sorting and simple array accessing
+        24, 60, 500, 1000, // for working with timers
+      ],
+    }],
     '@typescript-eslint/no-misused-new': ['error'],
     '@typescript-eslint/no-namespace': ['error'],
     '@typescript-eslint/no-non-null-assertion': ['error'],
-    '@typescript-eslint/no-object-literal-type-assertion': ['error', {'allowAsParameter': true}],
+    '@typescript-eslint/consistent-type-assertions': ['error', {
+      'assertionStyle': 'angle-bracket',
+      'objectLiteralTypeAssertions': 'allow-as-parameter',
+    }],
     '@typescript-eslint/no-parameter-properties': ['error'],
     '@typescript-eslint/no-require-imports': ['error'],
     '@typescript-eslint/no-this-alias': ['error'],
-    '@typescript-eslint/no-triple-slash-reference': ['error'],
+    '@typescript-eslint/triple-slash-reference': ['error', {'path': 'never', 'types': 'never', 'lib': 'never'}],
     '@typescript-eslint/no-type-alias': 'off',
     '@typescript-eslint/no-unnecessary-qualifier': ['error'],
     '@typescript-eslint/no-unnecessary-type-assertion': ['error'],
@@ -101,12 +113,23 @@ module.exports  = {
     '@typescript-eslint/prefer-for-of': ['error'],
     '@typescript-eslint/prefer-function-type': ['error'],
     '@typescript-eslint/prefer-includes': ['error'],
-    '@typescript-eslint/prefer-interface': ['error'],
+    '@typescript-eslint/consistent-type-definitions': ['error'],
     '@typescript-eslint/prefer-namespace-keyword': 'off',
+    '@typescript-eslint/prefer-regexp-exec': 'error',
     '@typescript-eslint/prefer-string-starts-ends-with': ['error'],
     '@typescript-eslint/promise-function-async': 'off',
     '@typescript-eslint/restrict-plus-operands': ['error'],
+    '@typescript-eslint/strict-boolean-expressions': ['error'],
     '@typescript-eslint/type-annotation-spacing': ['error'],
+    '@typescript-eslint/typedef': ['error', {
+      'arrayDestructuring': false,
+      'arrowParameter': false,
+      'memberVariableDeclaration': false,
+      'objectDestructuring': false,
+      'parameter': false,
+      'propertyDeclaration': true,
+      'variableDeclaration': false,
+    }],
     '@typescript-eslint/unbound-method': ['error', {'ignoreStatic': true}],
     '@typescript-eslint/unified-signatures': ['error']
   },
