@@ -81,7 +81,7 @@ module.exports  = {
     '@typescript-eslint/no-extraneous-class': ['error'],
     '@typescript-eslint/no-floating-promises': ['error'],
     '@typescript-eslint/no-for-in-array': ['error'],
-    '@typescript-eslint/no-inferrable-types': ['error'],
+    '@typescript-eslint/no-inferrable-types': ['error', {"ignoreParameters": true}],
     "no-magic-numbers": 'off',
     '@typescript-eslint/no-magic-numbers': ['error', {
       'ignoreReadonlyClassProperties': true,
